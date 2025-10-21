@@ -1,0 +1,22 @@
+services:
+  ros_noetic:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        USER_ID: ${USER_ID:-1000}
+        GROUP_ID: ${GROUP_ID:-1000}
+    image: underwater_tools:ros-noetic
+    container_name: underwater_data_tools
+    volumes:
+      - .:/workspace
+      - ./out:/workspace/out
+    environment:
+      - DISPLAY=${DISPLAY}
+      - ROS_MASTER_URI=http://localhost:11311
+      - ROS_HOSTNAME=localhost
+    network_mode: host
+    stdin_open: true
+    tty: true
+    user: "${USER_ID:-1000}:${GROUP_ID:-1000}"
+    command: /bin/bash
