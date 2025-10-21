@@ -51,32 +51,14 @@ The `bag2raw.py` script extracts data from ROS bag files and converts them into 
 
 #### Option 1: Process bag files from the workspace
 
-Place your `.bag` files in a directory, then run:
+Place your `.bag` files under data folder, then run:
 
 ```bash
-docker compose exec ros_noetic python3 bag2raw.py /workspace/<your_bag_directory>
+docker exec -it underwater_data_tools bash
+python3 ./bag2raw.py ./data
 ```
 
-Example:
-```bash
-# If you have bags in a folder called "data"
-docker compose exec ros_noetic python3 bag2raw.py /workspace/data
-```
-
-#### Option 2: Process bag files from host system
-
-If your bag files are outside the workspace, you can mount them:
-
-```bash
-docker compose exec ros_noetic python3 bag2raw.py /workspace/
-```
-
-Or enter the container interactively:
-
-```bash
-docker compose exec ros_noetic bash
-python3 bag2raw.py /workspace/data
-```
+If your bag files are outside the workspace, you need to mount them first in compose.yaml file.
 
 ### Output Structure
 
