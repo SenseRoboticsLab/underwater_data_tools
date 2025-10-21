@@ -1,6 +1,6 @@
 # Underwater Data Tools
 
-This repository contains tools for processing ROS bag files from underwater robotics data collection, specifically for extracting images, IMU data, DVL (Doppler Velocity Log) data, and odometry information.
+This repository contains the script for convertting ROS bag to RAW data format of [Tank Dataset](https://senseroboticslab.github.io/underwater-tank-dataset/).
 
 ## Prerequisites
 
