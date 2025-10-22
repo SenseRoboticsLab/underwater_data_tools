@@ -49,8 +49,6 @@ The `bag2raw.py` script extracts data from ROS bag files and converts them into 
 
 ### Usage
 
-#### Option 1: Process bag files from the workspace
-
 Place your `.bag` files under data folder, then run:
 
 ```bash
@@ -146,3 +144,6 @@ Processing large bag files may require significant memory. You can limit the pro
 
 All dependencies are automatically installed in the Docker container.
 
+## LICENSE
+
+This project is licensed under the GPL-3.0 License. See the [LICENSE](LICENSE) file for details.
